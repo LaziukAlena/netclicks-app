@@ -1,0 +1,54 @@
+.header {
+  margin-top: 34px;
+  margin-bottom: 15px;
+}
+
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Inter, sans-serif;
+  line-height: 29px;
+}
+
+.header-logo p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: Inter, sans-serif;
+  line-height: 15px;
+}
+
+.header-controls a {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Inter, sans-serif;
+  line-height: 17px;
+  text-decoration: none;
+  color: #000;
+}
+
+.header-controls--mobile {
+  display: none;
+  align-self: flex-start;
+}
+
+.header-controls a:hover {
+  cursor: pointer;
+  color: rgb(255, 73, 73);
+}
+@media (max-width: 768px) {
+  .header-controls {
+    display: none;
+  }
+
+  .header-controls--mobile {
+    display: block;
+  }
+}
