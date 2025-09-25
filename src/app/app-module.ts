@@ -7,6 +7,8 @@ import { Card } from './components/card/card';
 import { Header } from './components/header/header';
 import { Sidebar } from './components/sidebar/sidebar';
 import { Search } from './components/search/search';
+import { CatalogPage } from './pages/catalog-page/catalog-page';
+import { FilmPage } from './pages/film-page/film-page';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { Search } from './components/search/search';
     Card,
     Header,
     Sidebar,
-    Search
+    Search,
+    CatalogPage,
+    FilmPage
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component} from '@angular/core';
+import { Film } from './models/film.model';
+import { FILMS } from './constants/films.constants';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,5 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('netclicks-app');
+  public films: Film[] = FILMS
 }
