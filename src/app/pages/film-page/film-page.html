@@ -1,44 +1,35 @@
-  <section class="content">
-    <div class="container">
-      <div class="content-box">
-        <div class="content-film">
-          <div class="content-film__img">
-            <img src="./images/film.png" alt="film" />
-          </div>
-          <div class="content-film__info">
-            <div class="content-film__info__content">
-              <div class="content-film__info__title">
-                <h1>Марсианин,</h1>
-                <p>The Martian 2015</p>
-              </div>
-              <p class="content-film__info__description">
-                Фантастика, приключения
-              </p>
-              <p class="content-film__info__rating">7.8</p>
-              <p class="content-film__info__text">
-                Марсианская миссия «Арес-3» в процессе работы была вынуждена
-                экстренно покинуть планету из-за надвигающейся песчаной
-                бури. Инженер и биолог Марк Уотни получил повреждение
-                скафандра во время песчаной бури. Сотрудники миссии,
-                посчитав его погибшим, эвакуировались с планеты, оставив
-                Марка одного.
-              </p>
-              <p class="content-film__info__text">
-                Очнувшись, Уотни обнаруживает, что связь с Землёй
-                отсутствует, но при этом полностью функционирует жилой
-                модуль. Главный герой начинает искать способ продержаться на
-                имеющихся запасах еды, витаминов, воды и воздуха ещё 4 года
-                до прилёта следующей миссии «Арес-4».
-              </p>
+<section class="content">
+  <div class="container">
+    <div class="content-box">
+      <div class="content-film">
+        @if (film) {
+            <div class="content-film__img">
+                <img [src]="film.image" alt="film" />
             </div>
+            <div class="content-film__info">
+                <div class="content-film__info__content">
+                    <div class="content-film__info__title">
+                        <h1>{{ film.title }} ,</h1>
+                        <p>{{ film.original }}</p>
+                    </div>
+                    <p class="content-film__info__description">{{ film.category }}</p>
+                    <p class="content-film__info__rating">{{ film.rating }}</p>
+                    <p class="content-film__info__text">{{ film.description }}</p>
+                    <p class="content-film__info__text">
+                    Очнувшись, Уотни обнаруживает, что связь с Землёй отсутствует, но при этом полностью
+                    функционирует жилой модуль. Главный герой начинает искать способ продержаться на
+                    имеющихся запасах еды, витаминов, воды и воздуха ещё 4 года до прилёта следующей
+                    миссии «Арес-4».
+                    </p>
+                </div>
 
-            <div class="content-film__info__controls">
-              <button>Смотреть</button>
+                <div class="content-film__info__controls">
+                    <button>Смотреть</button>
+                </div>
             </div>
-          </div>
-        </div>
-        <app-sidebar></app-sidebar>
+        }
       </div>
+      <app-sidebar></app-sidebar>
     </div>
-  </section>
-
+  </div>
+</section>

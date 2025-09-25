@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FILMS } from '../../constants/films.constants';
 import { Film } from '../../models/film.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-film-page',
@@ -13,7 +13,8 @@ export class FilmPage implements OnInit {
   public films: Film[] = FILMS
   public film!: Film
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private _router: Router
   ) {
 
   }
@@ -25,7 +26,8 @@ export class FilmPage implements OnInit {
     const findFilm = this.films.find(film => film.id === id)
     if (findFilm) {
       this.film = findFilm
+    } else {
+      this._router.navigate(['/'])
     }
   }
-
 }

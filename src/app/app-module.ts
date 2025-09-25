@@ -9,6 +9,7 @@ import { Sidebar } from './components/sidebar/sidebar';
 import { Search } from './components/search/search';
 import { CatalogPage } from './pages/catalog-page/catalog-page';
 import { FilmPage } from './pages/film-page/film-page';
+import { NotFound } from './pages/not-found/not-found';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FilmPage } from './pages/film-page/film-page';
     Sidebar,
     Search,
     CatalogPage,
-    FilmPage
+    FilmPage,
+    NotFound
   ],
   imports: [
     BrowserModule,
